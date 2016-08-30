@@ -39,7 +39,7 @@ library
                     src
 
   exposed-modules:
-                    Papa.Prelude.Lens
+                    Papa.Prelude.Semigroups
 
 test-suite doctests
   type:
