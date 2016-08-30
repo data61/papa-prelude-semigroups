@@ -40,6 +40,7 @@ library
 
   exposed-modules:
                     Papa.Prelude.Semigroups
+                    , Papa.Prelude.Semigroups.Data.List
 
 test-suite doctests
   type:
