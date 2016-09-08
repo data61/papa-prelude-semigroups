@@ -10,6 +10,9 @@ module Papa.Prelude.Semigroups.Data.List(
 , foldl1'
 , scanr
 , scanl
+, Semigroup
+, Ord
+, NonEmpty((:|))
 ) where
   
 import Data.List.NonEmpty(NonEmpty((:|)), scanr, scanl)
@@ -67,22 +70,3 @@ foldl1' ::
   -> a
 foldl1' f (h :| t) =
   foldl' f h t
-
-{-
-scanr ::
-  (a -> b -> b)
-  -> b
-  -> [a]
-  -> NonEmpty b  
-scanr _ z [] =
-  z :| []
-scanr f z (h:t) =
-  let x@(i:|_) = scanr f z t
-  in  f h i :| toList x
--}
-
-{-
-scanl f q ls = q : case ls of
-<lambdabot>     []   -> []
-<lambdabot>     x:xs -> scanl f (f q x) xs
--}
